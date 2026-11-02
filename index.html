@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172c3a">
+  <title>The Missing Cake | jQuery Assignment 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>:root{--red:#d94d58;--green:#41946c;--blue:#3f7fc2;--yellow:#e5ad35;--purple:#9362ba;--black:#30383a}.case-button,.avatar-wrap{transition:none!important}</style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">✦</span><span>AFTER HOURS<span class="brand-sub">AITU HOUSE PARTY · CASE FILE 06</span></span></a>
+    <div class="top-meta"><span class="live-dot"></span> INCIDENT WINDOW <b>19:30 — 22:30</b><span class="top-divider"></span><span>CAKE MISSING AT <b>21:30</b></span></div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">THE NIGHT EVERYONE REMEMBERS</p><h1>A party.<br><em>A missing cake.</em></h1><p class="hero-intro">Twenty-one guests. Four rooms. One very suspicious slice of evidence. Explore the house and find out who took the cake.</p><div class="hero-stats"><div><strong>21</strong><span>GUESTS</span></div><i></i><div><strong>04</strong><span>ROOMS</span></div><i></i><div><strong>20</strong><span>CASES</span></div></div></div>
+      <div class="hero-art" aria-hidden="true"><div class="moon"></div><div class="house-glow"></div><div class="hero-note"><span class="note-pin"></span><span>THE KITCHEN<br>WENT QUIET AT 21:30</span></div><div class="hero-stamp">OPEN<br>CASE</div></div>
+    </section>
+    <section class="workspace">
+      <aside class="case-panel">
+        <div class="panel-title"><div><p class="eyebrow">INVESTIGATION BOARD</p><h2>Choose a case</h2></div><span class="case-count">01—20</span></div>
+        <p class="panel-hint">Each clue searches the guest cards in the house.</p>
+        <div class="case-groups">
+          <div class="case-group"><h3><span>01</span> PEOPLE & PLACES</h3><div id="cases-people" class="case-list"></div></div>
+          <div class="case-group"><h3><span>02</span> MOVEMENT & EVIDENCE</h3><div id="cases-clues" class="case-list"></div></div>
+        </div>
+        <button id="clearSpotlight" class="clear-button"><span>↺</span> Clear spotlight</button>
+      </aside>
+      <section class="house-section">
+        <div class="house-heading"><div><p class="eyebrow">THE SCENE</p><h2>Inside the house</h2></div><div class="house-legend"><span><i class="legend-ring"></i> CLOTHING</span><span><i class="legend-student">✦</i> AITU</span></div></div>
+        <div class="floor-label"><span>UPPER FLOOR</span><span class="floor-line"></span><span class="floor-num">02</span></div>
+        <div class="rooms upper-floor" id="upperFloor"></div>
+        <div class="floor-label"><span>GROUND FLOOR</span><span class="floor-line"></span><span class="floor-num">01</span></div>
+        <div class="rooms lower-floor" id="lowerFloor"></div>
+        <div class="result-bar" id="resultBar" aria-live="polite"><span class="result-icon">⌕</span><span id="resultText">Select a case to begin the investigation.</span></div>
+      </section>
+    </section>
+    <section class="field-notes"><div><p class="eyebrow">FIELD NOTES</p><h2>Keep the party moving</h2><p>Click a guest to inspect their details. Move guests between rooms, or sort a room by arrival time and back again.</p></div><div class="notes-badge">JQUERY<br><strong>SELECTORS</strong><br>+ EFFECTS</div></section>
+    <footer><span>AFTER HOURS · AITU HOUSE PARTY</span><span>JQUERY ASSIGNMENT 06 <b>✦</b></span></footer>
+  </main>
+  <div id="guestModal" class="modal-backdrop" aria-hidden="true"><div class="guest-modal" role="dialog" aria-modal="true" aria-labelledby="modalName"><button class="modal-close" aria-label="Close">×</button><div class="modal-photo-wrap"></div><div class="modal-content"><p class="eyebrow">GUEST FILE</p><h2 id="modalName"></h2><p class="modal-room"></p><div class="modal-facts"></div><div class="move-actions"><span>MOVE TO</span><div class="move-buttons"></div></div></div></div></div>
+</body>
+</html>
