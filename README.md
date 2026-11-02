@@ -18,8 +18,8 @@ Open `index.html` in a modern browser with an internet connection. jQuery 3.7.1 
 - `index.html` - page structure.
 - `styles.css` - visual design and responsive layout.
 - `app.js` - party data, DOM rendering, cases, and jQuery effects.
-- `Assignment6_YourName.docx` - report (fill in name, group, and repository URL).
+- `Assignment6_Ardak_Kazykhan.docx` - report for Ardak_Kazykhan, IT-2510.
 
-## GitHub
+## Repository
 
-Initialize or connect a GitHub repository and add its URL to the report before submission.
+https://github.com/ardkzhn0111/assik6
